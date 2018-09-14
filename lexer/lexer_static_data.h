@@ -1,0 +1,75 @@
+#ifndef __LEXER_STATIC_DATA__
+#define __LEXER_STATIC_DATA__
+
+
+
+const pair<const string, const Tokens> kws[] = {
+  make_pair("select", Tokens::SELECT),
+  make_pair("update", Tokens::UPDATE),
+  make_pair("delete", Tokens::DELETE),
+  make_pair("insert", Tokens::INSERT),
+  make_pair("into", Tokens::INTO),
+  make_pair("create", Tokens::CREATE),
+  make_pair("database", Tokens::DATABASE),
+  make_pair("alter", Tokens::ALTER),
+  make_pair("table", Tokens::TABLE),
+  make_pair("drop", Tokens::DROP),
+  make_pair("index", Tokens::INDEX),
+  make_pair( "group",Tokens::GROUP),
+  make_pair("by", Tokens::BY),
+  make_pair("procedure", Tokens::PROCEDURE),
+  make_pair("exec", Tokens::EXEC),
+  make_pair("values", Tokens::VALUES),
+  make_pair("from", Tokens::FROM),
+  make_pair("distinct", Tokens::DISTINCT),
+  make_pair("count", Tokens::COUNT),
+  make_pair("where", Tokens::WHERE),
+  make_pair("having", Tokens::HAVING),
+  make_pair("between", Tokens::BETWEEN),
+  make_pair("exists", Tokens::EXISTS),
+  make_pair("any", Tokens::ANY),
+  make_pair("all", Tokens::ALL),
+  make_pair("as", Tokens::AS),
+  make_pair("like", Tokens::LIKE),
+  make_pair("in", Tokens::IN),
+  make_pair("and", Tokens::AND),
+  make_pair("or", Tokens::OR),
+  make_pair("not", Tokens::NOT),
+  make_pair("order", Tokens:: ORDER),
+  make_pair("by", Tokens::BY),
+  make_pair("asc", Tokens::ASC),
+  make_pair("desc", Tokens::DESC),
+  make_pair("is", Tokens::IS),
+  make_pair("null",  Tokens::NUL),
+  make_pair("min", Tokens::MIN),
+  make_pair("max", Tokens::MAX),
+  make_pair("avg", Tokens::AVG),
+  make_pair("sum", Tokens::SUM),
+  make_pair("inner", Tokens::INNER),
+  make_pair("join", Tokens::JOIN),
+  make_pair("left", Tokens::LEFT),
+  make_pair("right", Tokens::RIGHT),
+  make_pair("full", Tokens::FULL),
+  make_pair("outer", Tokens::OUTER),
+  make_pair("union", Tokens::UNION),
+  make_pair("coalesce", Tokens::COALESCE),
+  make_pair("set", Tokens::SET),
+  make_pair("top", Tokens::TOP),
+  make_pair("limit", Tokens::LIMIT),
+  make_pair("percent", Tokens::PERCENT),
+  // Type keywords
+  make_pair("int", Tokens::INT),
+  make_pair("double", Tokens::DOUBLE),
+  make_pair("unsigned", Tokens::UNSIGNED),
+  make_pair("char", Tokens::CHAR),
+  make_pair("varchar", Tokens::VARCHAR),
+  make_pair("string", Tokens::STRING),
+  make_pair("binary", Tokens::BINARY),
+  make_pair("enum", Tokens::ENUM),
+  make_pair("set", Tokens::SET)
+};
+
+const map<const string, const Tokens> keywords (kws, kws + sizeof(kws) / sizeof(kws[0]));
+
+
+#endif  // __LEXER_STATIC_DATA__
